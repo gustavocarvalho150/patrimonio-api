@@ -13,5 +13,6 @@ public class PatrimonioApplication {
 		Empresa empresa = new Empresa();
 		empresa.setRazaoSocial("Senai LTDA");
 		System.out.println(empresa.getRazaoSocial());
+
 	}
 }
