@@ -16,7 +16,16 @@ public class PatrimonioApplication {
 		System.out.println(empresa.getRazaoSocial());
 
 		Endereco endereco = new Endereco();
-		endereco.setRua("Bela Vista");
+		endereco.setRua("Bela vista");
 		System.out.println(endereco.getRua());
+		System.out.println(endereco.getBairro());
+
+		empresa.setEndereco(endereco);
+		System.out.println(empresa.getEndereco().getRua());
+
+		Endereco enderecoComArgumentos = new Endereco("Líbano jose gomes",
+				"489", "Perto do posto de saúde",
+				"Santa luzia","Criciúma", "SC");
+		System.out.println(enderecoComArgumentos.getBairro());
 	}
 }
