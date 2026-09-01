@@ -5,6 +5,8 @@ import br.com.senai.patrimonio.model.Endereco;
 import br.com.senai.patrimonio.model.Funcionario;
 import br.com.senai.patrimonio.model.Sala;
 import br.com.senai.patrimonio.model.enums.Cargo;
+import br.com.senai.patrimonio.model.enums.Pagamento;
+import br.com.senai.patrimonio.model.enums.PagamentoComposto;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -29,10 +31,15 @@ public class PatrimonioApplication {
 		Endereco enderecoComArgumentos = new Endereco("Líbano jose gomes",
 				"489", "Perto do posto de saúde",
 				"Santa luzia","Criciúma", "SC");
-		System.out.println(enderecoComArgumentos.getBairro());
 
 		Sala sala = new Sala();
 
-		Funcionario funcionario = new Funcionario(35L,"Mariazinha","12345678", Cargo.GERENTE, empresa,sala);
+		Funcionario funcionario = new Funcionario(35L,"Mariazinha","12345678",
+				Cargo.GERENTE, empresa,sala);
+
+		System.out.println("-- ENUMS --\n");
+		System.out.println(Pagamento.PIX);
+		System.out.println(PagamentoComposto.PIX.getDescricao());
+		System.out.println(PagamentoComposto.PIX.getSituacao());
 	}
 }
