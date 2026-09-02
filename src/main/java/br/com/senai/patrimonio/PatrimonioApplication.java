@@ -1,5 +1,7 @@
 package br.com.senai.patrimonio;
 
+import br.com.senai.patrimonio.avaliacao.Participante;
+import br.com.senai.patrimonio.avaliacao.enums.Nivel;
 import br.com.senai.patrimonio.model.Empresa;
 import br.com.senai.patrimonio.model.Endereco;
 import br.com.senai.patrimonio.model.Funcionario;
@@ -41,5 +43,16 @@ public class PatrimonioApplication {
 		System.out.println(Pagamento.PIX);
 		System.out.println(PagamentoComposto.PIX.getDescricao());
 		System.out.println(PagamentoComposto.PIX.getSituacao());
+
+		// Testando a avaliação
+		System.out.println("\n--- AVALIAÇÃO ---\n");
+		Participante participante = new Participante(
+				"Ana",
+				"ana@gmail.com",
+				"99999-9999",
+				"P001",
+				Nivel.INTERMEDIARIO
+		);
+		System.out.println(participante.getNome());
 	}
 }
